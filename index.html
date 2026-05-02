@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance SaaS Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>📊 Attendly</h2>
+
+    <button onclick="showTab('dashboard')">Dashboard</button>
+    <button onclick="showTab('students')">Students</button>
+    <button onclick="showTab('attendance')">Attendance</button>
+  </div>
+
+  <!-- MAIN AREA -->
+  <div class="main">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <h3>School Attendance System</h3>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="tab">
+      <h1>Overview</h1>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Total Students</h3>
+          <p id="totalStudents">0</p>
+        </div>
+
+        <div class="card">
+          <h3>Present Today</h3>
+          <p id="presentCount">0</p>
+        </div>
+
+        <div class="card">
+          <h3>Absent Today</h3>
+          <p id="absentCount">0</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STUDENTS -->
+    <div id="students" class="tab hidden">
+      <h1>Students</h1>
+
+      <div class="panel">
+        <input id="studentId" placeholder="Student ID">
+        <input id="studentName" placeholder="Student Name">
+        <button onclick="addStudent()">Add Student</button>
+      </div>
+
+      <div id="studentTable"></div>
+    </div>
+
+    <!-- ATTENDANCE -->
+    <div id="attendance" class="tab hidden">
+      <h1>Attendance Records</h1>
+      <div id="attendanceTable"></div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
